@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+"use strict";/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './index.html',
@@ -18,7 +18,7 @@ module.exports = {
     extend: {
       colors: {
         'green-custom': '#7bd95d',
-        'color-white':'#FFF'
+        'color-white'
       },
     },
   },
@@ -71,3 +71,4 @@ module.exports = {
   ],
   darkMode: 'class',
 }
+ /* v7-8395747a23a68b2f */

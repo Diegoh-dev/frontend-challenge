@@ -10,6 +10,7 @@ import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
 import { SessionContext } from '@/core/providers/session.provider'
 import { GameStatus } from '@/core/providers/enums/game-status'
 import Navbar from '@/core/components/navbar'
+import NavbarMotoGrau from './components/NavBarMotoGrau'
 
 function HomePage() {
   const { setLoading } = useContext<any>(SessionContext)
@@ -32,7 +33,12 @@ function HomePage() {
       <div className="flex w-full sm:gap-3 min-h-screen relative">
         <section className="flex flex-col h-full grow p-0">
           <div className="" style={{ zIndex: 100 }}>
-            <Navbar
+            {/* <Navbar
+              game="motograu"
+              executeAction={executeAction}
+              balance={balance}
+            /> */}
+            <NavbarMotoGrau
               game="motograu"
               executeAction={executeAction}
               balance={balance}
