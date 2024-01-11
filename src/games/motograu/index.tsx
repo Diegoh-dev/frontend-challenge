@@ -3,7 +3,8 @@ import './index.css'
 import React, { useContext, useEffect } from 'react'
 import Display from './components/display'
 import Snackbar from '@/core/components/snackbar'
-import Results from '@/core/components/results'
+// import Results from '@/core/components/results'
+import Results from '../motograu/components/resultsMotoGrau';
 import TransactionBar from '@/core/components/transaction-bar'
 import Controls from '@/core/components/controls/crash-control'
 import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
@@ -59,9 +60,10 @@ function HomePage() {
                     className="rounded-md overflow-hidden w-full h-full pointer-events-none min-h-[250px] sm:min-h-[300px]"
                     src="/motograu/index.html"
                   ></iframe>
-                  <div className="transform sm:translate-y-[-390px] translate-y-[-200px]">
+                  {/* descomentar */}
+                  {/* <div className="transform sm:translate-y-[-390px] translate-y-[-200px]">
                     <Display color={'pink'} />
-                  </div>
+                  </div> */}
                 </div>
 
                 <Controls color="lime" position={'center'} />

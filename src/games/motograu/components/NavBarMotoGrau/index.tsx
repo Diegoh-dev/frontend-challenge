@@ -19,7 +19,9 @@ import {
 import { getGameLogo, getHowToPlay } from '../../../../core/helpers'
 import GameLimitsModal from '../../../../core/components/provably-fair/game-limits'//provably-fair/game-limits
 import { Chat } from '../../../../core/components/chat'
-
+import motograuLogo from '../../../../assets/logos/moto-grau.png';
+import ProgressBar from '../../../../core/components/progress-bar';
+import Display from '../display'
 export default function NavbarMotoGrau({
   game,
   balance,
@@ -40,8 +42,10 @@ export default function NavbarMotoGrau({
   const {soundEnabled,
         setSoundEnabled,
         soundClick,
-        playerName
+        playerName,
+        startTimeout, gameStatus, multiplier
         } = useContext(CrashGameContext)
+
 
   const handleSoundEnabled = (event) => {
     const { checked } = event.target
@@ -97,10 +101,19 @@ export default function NavbarMotoGrau({
 
   return (
     <div className="">
-      <div className="navbar mx-auto  my-auto sm:px-3 h-12 flex items-center w-full justify-end">
-        <h1 className="self-center">{getGameLogo(game)}</h1>
+      <div className="navbar mx-auto  my-auto sm:px-3 h-12 flex items-center w-full justify-between">
+        {/* <h1 className="self-center">{getGameLogo(game)}</h1>
+         */}
+         <img className='w-16' src={motograuLogo} alt="motograuLogo" />
 
-        <div className="flex items-center ml-auto gap-2">
+           {/* transform sm:translate-y-[-390px] translate-y-[-200px] */}
+           <div className='ml-16'>
+            <Display color={'pink'} />
+           </div>
+
+        <div 
+        // className="flex items-center ml-auto gap-2"
+        >
           {/* <button
             onClick={() => {
               setShowModal(!showModal)
@@ -111,14 +124,23 @@ export default function NavbarMotoGrau({
             <QuestionMarkCircleIcon className="h-5 w-5" />
             <span className="hidden sm:inline">Como Jogar?aaaa</span>
           </button> */}
+          {/* <div className="w-44">
+            <ProgressBar
+              max={10}
+              value={startTimeout}
+              color={'pink'}
+            />
+          </div> */}
 
-          <div className="bg-color-white p-2 text-base  text-center font-bold mr-1 transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer">
+        
+
+          <div className="bg-color-white p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer ">
             <span className=" 	text-[#202124] ">
               <span className="player-currency">R$</span> {balance}
             </span>
           </div>
 
-          <div className="border-l h-6 border-gray-400 border-opacity-50"></div>
+          <div className="mx-4 border-l h-6 border-gray-400 border-opacity-50"></div>
 
           <div className="dropdown dropdown-end" ref={dropdownRef}>
             <button
