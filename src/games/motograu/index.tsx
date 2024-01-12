@@ -61,9 +61,11 @@ function HomePage() {
                     src="/motograu/index.html"
                   ></iframe>
                   {/* descomentar */}
-                  {/* <div className="transform sm:translate-y-[-390px] translate-y-[-200px]">
-                    <Display color={'pink'} />
-                  </div> */}
+                  <div className="absolute left-1/2 top-1/2 right-1/2">
+                    <Display 
+                    color={'pink'}
+                    />
+                  </div>
                 </div>
 
                 <Controls color="lime" position={'center'} />

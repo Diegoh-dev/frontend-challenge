@@ -69,6 +69,7 @@ export default function Display({ color }: Props) {
               WebkitTextStroke: '1px #000',
               margin: '0',
               padding: '0',
+              width:'150px'
             }}
           >
             O piloto caiu!

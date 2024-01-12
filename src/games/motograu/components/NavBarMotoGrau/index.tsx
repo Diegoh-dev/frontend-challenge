@@ -107,9 +107,9 @@ export default function NavbarMotoGrau({
          <img className='w-16' src={motograuLogo} alt="motograuLogo" />
 
            {/* transform sm:translate-y-[-390px] translate-y-[-200px] */}
-           <div className='ml-16'>
+           {/* <div className='ml-16'>
             <Display color={'pink'} />
-           </div>
+           </div> */}
 
         <div 
         // className="flex items-center ml-auto gap-2"
