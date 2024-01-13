@@ -6,15 +6,17 @@ import BetsTab from './tabs/bets'
 import HistoryTab from './tabs/history'
 import BestTab from './tabs/best'
 import Footer from '@/core/components/footer'
+import { Chat } from '../chat'
 
 type Props = {
   variant: string
 }
 
 export default function TransactionBar({ variant }: Props) {
-  const [activeTab, setActiveTab] = useState('bets')
+  const [activeTab, setActiveTab] = useState('chat')
 
   const tabs: Tab[] = [
+    { key: 'chat', title: 'Chat' },
     { key: 'bets', title: 'Apostas' },
     { key: 'history', title: 'Histórico' },
     // { key: 'best', title: 'Estatísticas' },
@@ -24,7 +26,7 @@ export default function TransactionBar({ variant }: Props) {
     <div className="h-full py-8">
       <div className="flex flex-col transaction-bar min-h-[400px] flex-1 grow h-full w-full p-3 rounded-md bg-black bg-opacity-20 border border-gray-600 border-opacity-20 relative ">
         <section className="w-full flex justify-center ">
-          <div className="w-full sm:w-[90%]">
+          <div className="w-full sm:w-[98%]">
             <Tabs
               tabs={tabs}
               size="w-1/2"
@@ -34,6 +36,10 @@ export default function TransactionBar({ variant }: Props) {
             />
           </div>
         </section>
+
+        <If condition={activeTab == 'chat'}>
+        <Chat/>
+        </If>
 
         <If condition={activeTab == 'bets'}>
           <BetsTab />

@@ -27,7 +27,7 @@ export default function HistoryTab() {
             <div className="text-sm">{betsHistory.length}x</div>
           </div>
 
-          <span className="text-sm">R$ {sum(betsHistory)}</span>
+          <span className="bg-color-white p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer text-[#202124]">R$ {sum(betsHistory)}</span>
         </div>
       </section>
       <Header />

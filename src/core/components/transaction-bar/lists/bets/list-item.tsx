@@ -20,10 +20,10 @@ export default function ListItem({ data }: Props) {
 
   return (
     <div
-      className={`flex items-center rounded mb-1 border text-xs border-transparent p-1.5 gap-1 ${
+      className={`flex items-center rounded-xl mb-1 border text-xs border-transparent p-2 gap-2 ${
         isGreen
-          ? 'border-green-700 bg-green-600 bg-opacity-20'
-          : ' border-gray-700 bg-gray-600 bg-opacity-20'
+          ? 'border-[#005C4B] bg-[#005C4B] '
+          : ' border[#202C33] bg-[#202C33] bg-opacity-20'
       } `}
     >
       <h1 className="w-1/4 flex gap-3 overflow-hidden items-center">
@@ -43,12 +43,12 @@ export default function ListItem({ data }: Props) {
       <h1 className="w-1/4 items-center text-center gap-2">
         <If condition={data.outcome == 'win'}>
           <span
-            className="bg-green-500 text-center mx-auto rounded-full text-xs h-5 flex items-center justify-center text-gray-100 w-12">
+            className="bg-color-white text-center mx-auto rounded-full text-xs h-5 flex items-center justify-center text-green-500 w-12 font-bold">
             {data.payout}x
           </span>
         </If>
       </h1>
-      <div className="w-1/4 text-right">
+      <div className="w-1/4 text-right font-bold">
         <If condition={data.outcome === 'win'}>
           {data.profit !== undefined && typeof data.profit === 'number'
             ? `R$ ${data.profit.toFixed(2)}`

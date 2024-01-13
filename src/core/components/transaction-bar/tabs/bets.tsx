@@ -52,12 +52,12 @@ export default function BetsTab() {
 
       <section className="py-3  w-full">
         <div className="flex justify-between rounded bg-opacity-25 items-center ">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 font-bold  bg-color-white p-2 rounded-xl text-[#202124] ">
             <UserIcon className="h-3.5 w-3.5" />
-            <div className="text-sm">{registeredBets.length}</div>
+            <div className="text-sm" >{registeredBets.length}</div>
           </div>
 
-          <span className="text-sm">R$ {sum(registeredBets)}</span>
+          <span className="bg-color-white p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer text-[#202124]">R$ {sum(registeredBets)}</span>
         </div>
       </section>
 

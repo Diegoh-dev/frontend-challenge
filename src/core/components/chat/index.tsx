@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
-
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import { IoSend } from "react-icons/io5";
 import If from '../conditions/if'
-
+import { FaUser } from "react-icons/fa";
 import EmojiPicker, {
   Theme,
   Categories,
@@ -11,11 +11,12 @@ import { FaceSmileIcon } from '@heroicons/react/24/outline'
 import { CrashGameContext } from '@/core/providers/games/crash-game.provider'
 import { IGameMessage } from '../../providers/interfaces/game-message.interface'
 import { dateToHumanReadable } from '@/core/helpers/date'
+import { FaRegFaceSmile } from "react-icons/fa6";
 type Props = {
-  show: boolean
+  show?: boolean
 }
 
-export const Chat = ({ show }: Props) => {
+export const Chat = ({ show = true }: Props) => {
   const { messages, sendMessage, session } =
     useContext(CrashGameContext)
   const [showEmojiPicker, setShowEmojiPicker] = useState(false)
@@ -47,11 +48,22 @@ export const Chat = ({ show }: Props) => {
     else setMessage(e.target.value)
   }
 
+  const divScrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if(divScrollRef.current){
+      divScrollRef.current.scrollTop = divScrollRef.current.scrollHeight;
+    }
+  },[messages.length])
+
+//    h-[50%] sm:h-[80%] md:h-[70%] lg:h-[60%]
   return (
     <If condition={show}>
-      <div className="w-80 mt-0 py-2 mb-44 px-2 border-l border-gray-700 border-opacity-50 text-sm rounded-lg bg-black backdrop-blur-sm bg-opacity-30 chat-container absolute right-0 z-40  h-[50%] sm:h-[80%] md:h-[70%] lg:h-[60%]">
+      <div  className="w-full mt-4 py-2 mb-2 px-2 border-l border-gray-700 border-opacity-50 text-sm rounded-lg bg-black backdrop-blur-sm bg-opacity-30 bg-[#321041] z-40  
+      h-[100%]
+      ">
         <div className="flex flex-col relative gap-3 h-full">
-          <div className="mb-12 p-2 flex-shrink-1 flex-grow basis-0  overflow-y-scroll scrollbar-w-0 scrollbar-track-gray-400 scrollbar-thumb-gray-600 scrollbar scrollbar-track-rounded scrollbar-thumb-rounded">
+          <div ref={divScrollRef} className="mb-2 p-2 flex-shrink-1 flex-grow basis-0  overflow-y-scroll scrollbar-w-0 scrollbar-track-gray-400 scrollbar-thumb-gray-600 scrollbar scrollbar-track-rounded scrollbar-thumb-rounded">
             {messages.map((data: IGameMessage, idx: number) => {
               return (
                 <>
@@ -59,11 +71,12 @@ export const Chat = ({ show }: Props) => {
                     <div className="chat chat-end" key={idx}>
                       <div className="chat-image avatar">
                         <div className="w-5 rounded-full">
-                          <img src="https://www.fiscalti.com.br/wp-content/uploads/2021/02/default-user-image.png" />
+                          {/* <img src="https://www.fiscalti.com.br/wp-content/uploads/2021/02/default-user-image.png" /> */}
+                          <FaUser size={20}/>
                         </div>
                       </div>
 
-                      <div className="chat-bubble min-h-0">
+                      <div className="chat-bubble min-h-0 bg-[#005C4B]">
                         {data.message}
                       </div>
                       <div className="chat-footer text-xs opacity-50">
@@ -76,10 +89,13 @@ export const Chat = ({ show }: Props) => {
                     <div className="chat chat-start" key={idx}>
                       <div className="chat-image avatar">
                         <div className="w-5 rounded-full">
-                          <img src="https://www.fiscalti.com.br/wp-content/uploads/2021/02/default-user-image.png" />
+                          {/* <img src="https://www.fiscalti.com.br/wp-content/uploads/2021/02/default-user-image.png" /> */}
+                          <FaUser size={20} />
                         </div>
                       </div>
-                      <div className="chat-bubble min-h-0">
+                      {/* <span>{session.userId}</span> */}
+                      <span className='font-bold'>Name user</span>
+                      <div className="chat-bubble min-h-0 bg-[#202C33]">
                         {data.message}
                       </div>
                       <div className="chat-footer text-xs opacity-50">
@@ -138,25 +154,26 @@ export const Chat = ({ show }: Props) => {
               </div>
             </If>
             <div className="form-control">
-              <div className="input-group">
+              {/* input-group */}
+              <div className=" flex items-center justify-between p-1">
                 <button
-                  className="btn btn-sm"
                   onClick={(e) => handleShowEmojiPicker(e)}
                 >
-                  <FaceSmileIcon className="w-4 h-4" />
+               <FaRegFaceSmile size={20}/>
                 </button>
                 <input
-                  className="input input-sm w-full"
+                  className="input input-sm w-[80%]	 bg-[#E9E9E9] outline-0 text-[#333333]
+                  rounded-full"
                   value={message}
                   onChange={handleMessage}
                   onKeyDown={handleMessage}
                 />
 
                 <button
-                  className="btn btn-sm capitalize"
+                  className=""
                   onClick={attemptSendMessage}
                 >
-                  Enviar
+                 <IoSend  size={20}/>
                 </button>
               </div>
             </div>

@@ -24,7 +24,7 @@ export default function HowToPlay({ show, toggle }: Props) {
             zIndex: 9999,
           }}
         >
-          <h1 className="text-1xl uppercase font-bold pl-1 flex gap-4">
+          <h1 className="text-1xl uppercase font-bold pl-28 flex gap-4 ">
             <BanknotesIcon className="opacity-50 w-6 h-6" /> Regras do
             Jogo - Moto Grau
           </h1>

@@ -28,7 +28,7 @@ const getBackgroundColor = (color: string) => {
     case 'blue':
       return 'bg-blue-600 hover:bg-blue-700'
     case 'lime':
-      return 'bg-[#28a909] hover:bg-[#28a909] border-[#b2f2a3]'
+      return 'bg-[#005C4B] hover:bg-[#003f33] '
     case 'amber':
       return 'bg-amber-600 hover:bg-amber-700'
     case 'yellow':
@@ -148,7 +148,7 @@ export default function CrashForm({
   ]
 
   return (
-    <div className="bg-black border border-gray-600 bg-opacity-20 border-opacity-20 crash-form w-full h-45 md:w-1/2 flex rounded-md p-3 relative">
+    <div className=" bg-black border border-gray-600 bg-opacity-20 border-opacity-20 crash-form w-full h-45 md:w-1/2 flex rounded-3xl p-3 relative">
       <If condition={toggleSecond && !secondEnabled}>
         <button
           onClick={toggleSecond}
@@ -213,7 +213,7 @@ export default function CrashForm({
                         transaction.status !=
                         TransactionStatus.UNREGISTERED
                       }
-                      className="btn btn-ghost min-h-0 flex-1 w-full h-full rounded text-xl font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
+                      className="btn btn-ghost min-h-0 flex-1 w-full h-full rounded-3xl text-xl font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
                     >
                       &frac12;
                     </button>
@@ -227,7 +227,7 @@ export default function CrashForm({
                         transaction.status !=
                         TransactionStatus.UNREGISTERED
                       }
-                      className="btn btn-ghost min-h-0 grow w-full h-full rounded capitalize text-normal font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
+                      className="btn btn-ghost min-h-0 grow w-full h-full  capitalize text-normal font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40 rounded-3xl"
                     >
                       2x
                     </button>
@@ -273,7 +273,7 @@ export default function CrashForm({
               }
             >
               <button
-                className={`btn border-2 hover:border-gray-300 text-[22px] hover:text-[24px] rounded-[20px] border-gray-400 ${getBackgroundColor(
+                className={`btn text-[22px] hover:text-[24px] rounded-3xl  ${getBackgroundColor(
                   color
                 )} flex flex-col px-0 text-white h-full w-full`}
               >
@@ -295,7 +295,7 @@ export default function CrashForm({
               }
             >
               <button
-                className={`btn border-2 text-[22px] hover:text-[24px] flex flex-col px-0 text-white h-full w-full bg-red-700 rounded-[20px] hover:bg-red-800 border-[#ffffff40] hover:border-gray-400 `}
+                className={`btn text-[22px] hover:text-[24px] flex flex-col px-0 text-white h-full w-full bg-[#FF5050] rounded-[20px] hover:bg-[#FF3333] `}
                 onClick={() => cancelTransaction(position)}
               >
                 <If condition={transaction.autoStarted}>
@@ -345,7 +345,7 @@ export default function CrashForm({
               }
             >
               <button
-                className={`btn border-2 text-[22px] hover:text-[24px] bg-[#ff7700] rounded-[20px] hover:bg-[#d26200] border-[#ffffff40] flex flex-col px-0 text-white h-full w-full`}
+                className={`btn text-[22px] hover:text-[24px] bg-[#FF8000] rounded-[20px] flex flex-col px-0 text-white h-full w-full`}
                 onClick={() => cashOut(position)}
               >
                 <If condition={transaction.autoStarted}>

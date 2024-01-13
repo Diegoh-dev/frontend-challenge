@@ -15,21 +15,21 @@ export default function ListItem({ data, showRoundInfo }: Props) {
   return (
     <>
       <div
-        className={`justify-between flex items-center rounded mb-1 border text-xs border-transparent p-1.5 gap-1 ${
+        className={`justify-between flex items-center rounded-xl mb-1 border text-xs border-transparent p-1.5 gap-1 ${
           isGreen
-            ? 'border-green-700 bg-green-600 bg-opacity-20'
-            : ' border-gray-700 bg-gray-600 bg-opacity-20'
+            ? 'border-[#005C4B] bg-[#005C4B] '
+            : 'border[#202C33] bg-[#202C33] bg-opacity-20'
         } `}
       >
         <h1 className="w-1/4 flex gap-3 items-center">
           {dateToHumanReadable(data.updated_at)}
         </h1>
-        <h1 className="w-1/4 flex items-center justify-center gap-2">
+        <h1 className="w-1/4 flex items-center justify-center gap-2 font-bold">
           R${data.amount}
         </h1>
         <h1 className="w-1/4 flex items-center gap-2">
           <If condition={data.outcome == 'win'}>
-            <div className="bg-green-500 rounded-full text-xs h-5 flex mx-auto items-center justify-center text-gray-100 w-12 text-center">
+            <div className=" bg-color-white font-green-500 rounded-full text-xs h-5 flex mx-auto items-center justify-center text-gray-100 w-12 text-center">
               {data.payout}x
             </div>
           </If>
