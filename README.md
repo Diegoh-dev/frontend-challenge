@@ -7,7 +7,7 @@
 
 # Explicação
 
-O projeto representa um desafio realizado pela Hypetech. A principal meta é aprimorar a interface do usuário, visando proporcionar uma experiência mais amigável e otimizada, tornando a aplicação mais envolvente para que os usuários possam desfrutar plenamente do jogo.
+O projeto representa um desafio realizado pela Hypetech. A principal meta é aprimorar a interface do usuário, visando proporcionar uma experiência mais amigável e otimizada, tornando a aplicação mais envolvente para que os usuários possam desfrutar plenamente do jogo Motograu.
 
 # Página
 
@@ -22,8 +22,6 @@ Nessa página, é apresentada uma área onde o chat pode permanecer visível e s
 - Websocket
 
 
-# Instruções técnicas
-Este projeto contém a aplicação das interfaces do jogo Motograu
 
 # Como usar?
 Antes de começar, você precisa ter o Git e o Node instalados.
