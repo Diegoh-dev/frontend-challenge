@@ -1,7 +1,7 @@
 
 #  Desafio Frontend Hypetech 
 
-A brief description of what this project does and who it's for
+
 
 <img src="./src/assets/motograu.png" alt="Motograu">
 
