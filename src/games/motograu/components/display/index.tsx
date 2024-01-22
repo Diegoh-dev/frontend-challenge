@@ -17,7 +17,7 @@ export default function Display({ color }: Props) {
     <div className="">
       <If condition={gameStatus == GameStatus.IDLE}>
         <div className="w-full flex flex-col items-center justify-center">
-          <div className="w-44">
+          <div className="w-60">
             <ProgressBarMotoGrau
               max={10}
               value={startTimeout}
@@ -30,7 +30,7 @@ export default function Display({ color }: Props) {
       <If condition={gameStatus == GameStatus.RUNNING}>
         <div className="relative flex justify-center items-center">
           <h1
-            className="text-lg md:text-6xl lg:text-5xl font-bold text-gray-200 drop-shadow"
+            className="text-lg md:text-6xl lg:text-5xl font-bold text-color-white drop-shadow"
             style={{
               WebkitTextStroke: '1px #000',
             }}

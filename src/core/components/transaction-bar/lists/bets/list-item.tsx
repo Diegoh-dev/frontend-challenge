@@ -20,10 +20,10 @@ export default function ListItem({ data }: Props) {
 
   return (
     <div
-      className={`flex items-center rounded-xl mb-1 border text-xs border-transparent p-2 gap-2 ${
+      className={`flex items-center rounded-xl mb-2 border text-xs border-transparent p-2 gap-2 ${
         isGreen
-          ? 'border-[#005C4B] bg-[#005C4B] '
-          : ' border[#202C33] bg-[#202C33] bg-opacity-20'
+          ? 'border-color-Emphasis1 bg-color-Emphasis1 '
+          : ' border-color-Secondary bg-color-Secondary '
       } `}
     >
       <h1 className="w-1/4 flex gap-3 overflow-hidden items-center">
@@ -43,7 +43,7 @@ export default function ListItem({ data }: Props) {
       <h1 className="w-1/4 items-center text-center gap-2">
         <If condition={data.outcome == 'win'}>
           <span
-            className="bg-color-white text-center mx-auto rounded-full text-xs h-5 flex items-center justify-center text-green-500 w-12 font-bold">
+            className="bg-color-white text-center mx-auto rounded-full text-xs h-5 flex items-center justify-center text-color-Emphasis3 w-12 font-bold">
             {data.payout}x
           </span>
         </If>

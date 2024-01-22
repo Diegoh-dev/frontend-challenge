@@ -22,7 +22,7 @@ export default function Modal({
       ></input>
 
       <div className="modal text-sm w-full px-5">
-        <div className="modal-box w-full p-0 mt-20 sm:mt-0 scrollbar-track-rounded scrollbar-thumb-rounded relative custom-scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-black">
+        <div className=" w-[620px] h-[500px] p-0 mt-20 sm:mt-0 scrollbar-track-rounded scrollbar-thumb-rounded relative custom-scrollbar scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-black  bg-black rounded-[28px]" >
           {Children.map(children, (child) => child)}
         </div>
       </div>

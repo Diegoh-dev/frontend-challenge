@@ -59,11 +59,11 @@ export const Chat = ({ show = true }: Props) => {
 //    h-[50%] sm:h-[80%] md:h-[70%] lg:h-[60%]
   return (
     <If condition={show}>
-      <div  className="w-full mt-4 py-2 mb-2 px-2 border-l border-gray-700 border-opacity-50 text-sm rounded-lg bg-black backdrop-blur-sm bg-opacity-30 bg-[#321041] z-40  
+      <div  className="w-full mt-3 py-2 mb-[2px] px-2 border-l border-gray-700 border-opacity-50 text-sm rounded-[28px]  backdrop-blur-sm bg-opacity-30 bg-color-Secondary z-40  
       h-[100%]
       ">
         <div className="flex flex-col relative gap-3 h-full">
-          <div ref={divScrollRef} className="mb-2 p-2 flex-shrink-1 flex-grow basis-0  overflow-y-scroll scrollbar-w-0 scrollbar-track-gray-400 scrollbar-thumb-gray-600 scrollbar scrollbar-track-rounded scrollbar-thumb-rounded">
+          <div ref={divScrollRef} className="mb-2 p-2 flex-shrink-1 flex-grow basis-0  overflow-y-scroll scrollbar-w-0 scrollbar-track-gray-400 scrollbar-thumb-gray-600 scrollbar scrollbar-track-rounded scrollbar-thumb-rounded overflow-x-hidden">
             {messages.map((data: IGameMessage, idx: number) => {
               return (
                 <>
@@ -76,7 +76,7 @@ export const Chat = ({ show = true }: Props) => {
                         </div>
                       </div>
 
-                      <div className="chat-bubble min-h-0 bg-[#005C4B]">
+                      <div className="chat-bubble min-h-0 bg-color-Emphasis1">
                         {data.message}
                       </div>
                       <div className="chat-footer text-xs opacity-50">
@@ -162,7 +162,7 @@ export const Chat = ({ show = true }: Props) => {
                <FaRegFaceSmile size={20}/>
                 </button>
                 <input
-                  className="input input-sm w-[80%]	 bg-[#E9E9E9] outline-0 text-[#333333]
+                  className="input input-sm w-[76%] outline-none border-none focus:outline-none bg-[#E9E9E9] outline-0 text-[#333333]
                   rounded-full"
                   value={message}
                   onChange={handleMessage}
@@ -170,10 +170,10 @@ export const Chat = ({ show = true }: Props) => {
                 />
 
                 <button
-                  className=""
+                  className="bg-color-Emphasis1 p-2 rounded-full"
                   onClick={attemptSendMessage}
                 >
-                 <IoSend  size={20}/>
+                 <IoSend  size={18}/>
                 </button>
               </div>
             </div>

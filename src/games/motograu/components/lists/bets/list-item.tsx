@@ -14,9 +14,9 @@ export default function ListItem({ data }: Props) {
 
   return (
     <div
-      className={` flex items-center rounded-lg mb-1 border text-xs border-transparent p-1 ${
+      className={`mb-2 flex items-center rounded-lg  border text-xs border-transparent p-1 ${
         isGreen
-          ? 'border-green-700 bg-green-600 bg-opacity-25 '
+          ? 'border-color-Emphasis1 bg-color-Emphasis1 '
           : isRed
           ? 'border-red-800 bg-red-600 bg-opacity-20 '
           : 'border-slate-700 bg-slate-600 bg-opacity-25 '
@@ -34,7 +34,7 @@ export default function ListItem({ data }: Props) {
       </h1>
       <div className="w-1/4">
         <If condition={data.cashed_out_at != null}>
-          <div className="bg-green-500 rounded-full text-xs h-5 flex items-center justify-center text-gray-100 w-12 text-center">
+          <div className="bg-color-Emphasis1 rounded-full text-xs h-5 flex items-center justify-center text-gray-100 w-12 text-center">
             {data?.cashed_out_at?.toFixed(2)}x
           </div>
         </If>

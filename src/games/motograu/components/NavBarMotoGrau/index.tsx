@@ -106,8 +106,8 @@ export default function NavbarMotoGrau({
         <img className="w-16" src={motograuLogo} alt="motograuLogo" />
         <div
         >
-          <div className="bg-color-white p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer ">
-            <span className=" 	text-[#202124] ">
+          <div className="bg-color-Emphasis1 p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer ">
+            <span className=" 	text-color-white ">
               <span className="player-currency">R$</span> {balance}
             </span>
           </div>
@@ -123,20 +123,20 @@ export default function NavbarMotoGrau({
             </button>
 
             {isDropdownOpen && (
-              <div className="mt-5 menu menu-compact  py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[0] z-10 bg-[#fff] rounded-xl">
+              <div className="mt-5 menu menu-compact  py-2 w-[280px] max-w-[300px] absolute top-[30px] right-[5px] z-10 bg-color-Secondary rounded-xl">
                 <div className="flex gap-4 p-4">
                   <img
                     src="https://api.multiavatar.com/NOME.svg"
-                    className="h-12 invert rounded-lg"
+                    className="h-12 rounded-lg"
                   />
                   <div className="mt-1">
-                    <p className="font-bold text-xs text-[#190C1E]">
+                    <p className="font-bold text-xs text-color-white">
                       {/* Nome do Jogador */}
                       {playerName}
                     </p>
                     <p className="text-xs flex mt-1">
                       <span className="block mt-1 mr-2 rounded-full bg-green-600 h-2 w-2"></span>{' '}
-                      <span className="text-[#190C1E]">
+                      <span className="text-color-white">
                         Online agora
                       </span>
                     </p>
@@ -145,7 +145,7 @@ export default function NavbarMotoGrau({
                 <div className="px-2 text-xs item">
                   <div className="form-control">
                     <label className="label hover:font-bold cursor-pointer">
-                      <span className="label-text text-xs text-[#190C1E]">
+                      <span className="label-text text-xs text-color-white">
                         Sons
                       </span>
                       <label className="relative inline-flex items-center cursor-pointer">
@@ -164,7 +164,7 @@ export default function NavbarMotoGrau({
                 <div className="px-2 text-xs item">
                   <div className="form-control">
                     <label className="label hover:font-bold cursor-pointer">
-                      <span className="label-text text-xs text-[#190C1E]">
+                      <span className="label-text text-xs text-color-white">
                         Música
                       </span>
                       <label className="relative inline-flex items-center cursor-pointer">
@@ -197,22 +197,22 @@ export default function NavbarMotoGrau({
               </div>} */}
 
                 <div
-                  className="px-3 cursor-pointer py-3 text-sm hover:font-bold text-xs item"
+                  className="px-3 cursor-pointer py-3  hover:font-bold text-xs item"
                   onClick={() => {
                     setShowGameLimitsModal(!showGameLimitsModal)
                     soundClick()
                   }}
                 >
-                  <label className="cursor-pointer text-xs text-[#190C1E]">
+                  <label className="cursor-pointer text-xs text-color-white">
                     Limites de Jogo
                   </label>
                 </div>
 
                 <a
-                  className="px-3 cursor-pointer py-3 text-sm hover:font-bold text-xs item"
+                  className="px-3 cursor-pointer py-3  hover:font-bold text-xs item"
                   href=""
                 >
-                  <label className="cursor-pointer  text-xs text-[#190C1E]">
+                  <label className="cursor-pointer  text-xs text-color-white">
                     Suporte ao jogador Hypetech
                   </label>
                 </a>

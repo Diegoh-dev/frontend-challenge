@@ -28,7 +28,7 @@ const getBackgroundColor = (color: string) => {
     case 'blue':
       return 'bg-blue-600 hover:bg-blue-700'
     case 'lime':
-      return 'bg-[#005C4B] hover:bg-[#003f33] '
+      return 'bg-color-Emphasis3 hover:bg-color-Emphasis1 '
     case 'amber':
       return 'bg-amber-600 hover:bg-amber-700'
     case 'yellow':
@@ -148,11 +148,11 @@ export default function CrashForm({
   ]
 
   return (
-    <div className=" bg-black border border-gray-600 bg-opacity-20 border-opacity-20 crash-form w-full h-45 md:w-1/2 flex rounded-3xl p-3 relative">
+    <div className=" bg-color-Secondary w-full h-45 md:w-1/2 flex rounded-3xl p-3 relative">
       <If condition={toggleSecond && !secondEnabled}>
         <button
           onClick={toggleSecond}
-          className={`btn border-none bg-[#ffffff] bg-opacity-10 btn-xs btn-circle absolute px-1 mt-1 right-3`}
+          className={`btn border-none bg-color-Emphasis2  btn-xs btn-circle absolute px-1 mt-1 right-3 hover:bg-color-Emphasis2`}
         >
           <PlusIcon className="h-4 w-4" />
         </button>
@@ -161,7 +161,7 @@ export default function CrashForm({
       <If condition={hideSelf}>
         <button
           onClick={() => hideSelf()}
-          className={`btn border-none btn-xs bg-[#ffffff] bg-opacity-10 hover:bg-opacity-95 btn-circle absolute px-1 mt-1 right-3`}
+          className={`btn border-none btn-xs bg-color-Emphasis2  hover:bg-color-Emphasis2 btn-circle absolute px-1 mt-1 right-3`}
         >
           <MinusIcon className="h-4 w-4" />
         </button>
@@ -170,7 +170,7 @@ export default function CrashForm({
       <form
         ref={formRef}
         method="POST"
-        className="w-full xl:w-[75%] mx-auto justify-center"
+        className="w-full xl:w-[90%] mx-auto justify-center"
         onSubmit={(e) => submitTransaction(e)}
       >
         <input type="hidden" name="teste" />
@@ -186,7 +186,7 @@ export default function CrashForm({
           </div>
         </div>
         <section className="flex mx-auto gap-3">
-          <div className="flex flex-col w-6/12 sm:w-6/12">
+          <div className="flex flex-col w-6/12 sm:w-[55%]">
             <div className="flex mb-2 gap-2">
               <div className="w-1/2">
                 <TextField
@@ -344,18 +344,19 @@ export default function CrashForm({
                 transaction?.status == TransactionStatus.REGISTERED
               }
             >
+              {/* btn */}
               <button
-                className={`btn text-[22px] hover:text-[24px] bg-[#FF8000] rounded-[20px] flex flex-col px-0 text-white h-full w-full`}
+                className={`items-center justify-center text-[22px] hover:text-[24px] bg-color-Emphasis2 rounded-[20px] flex flex-col px-0 text-white h-full w-full`}
                 onClick={() => cashOut(position)}
               >
                 <If condition={transaction.autoStarted}>
-                  <span className="text-sm">
-                    Retirar ({transaction.roundCount + 1})
+                  <span className="text-sm font-bold">
+                    RETIRAR ({transaction.roundCount + 1})
                   </span>
                 </If>
 
                 <If condition={!transaction.autoStarted}>
-                  <span className="text-sm">Retirar</span>
+                  <span className="text-sm font-bold">RETIRAR</span>
                 </If>
                 <span className="text-xl font-semibold">
                   R$ {(transaction.amount * multiplier).toFixed(2)}

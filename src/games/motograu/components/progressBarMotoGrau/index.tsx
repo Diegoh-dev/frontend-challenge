@@ -35,9 +35,9 @@ export default function ProgressBarMotoGrau({
   label = 'Próxima Rodada em',
 }: Props) {
   return (
-    <div className="w-full relative flex items-center border border-gray-500 bg-gray-600 bg-opacity-50 border-opacity-50 rounded-full h-8 dark:bg-gray-700 p-1">
+    <div className="w-full relative flex items-center border border-gray-500 bg-color-Primary  border-opacity-50 rounded-full h-8 dark:bg-gray-700 p-1">
       <div
-        className={`bg-[#FF8000] h-full transition-all duration-100 rounded-full`}
+        className={`bg-color-Emphasis3 h-full transition-all duration-100 rounded-full`}
         style={{
           width: `${(value / max) * 100}%`,
           transitionTimingFunction: 'linear',
@@ -45,7 +45,7 @@ export default function ProgressBarMotoGrau({
         }}
       ></div>
 
-      <small className="absolute w-full h-full font-semibold text-center text-xs  pointer-events-none flex items-center justify-center text-gray-200 uppercase">
+      <small className="absolute w-full h-full font-semibold text-center text-base  pointer-events-none flex items-center justify-center text-color-white uppercase">
         {label} {Math.abs(value)}
       </small>
     </div>

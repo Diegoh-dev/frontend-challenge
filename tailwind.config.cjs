@@ -17,8 +17,13 @@ module.exports = {
     },
     extend: {
       colors: {
+        'color-Primary':'#141A28',
+        'color-Secondary':'#1C2437',
+        'color-Emphasis1':'#379B7E',
+        'color-Emphasis2':'#383689',
+        'color-Emphasis3':'#29725F',
+        'color-white':'#FFF',
         'green-custom': '#7bd95d',
-        'color-white':'#FFF'
       },
     },
   },

@@ -158,7 +158,7 @@ export default function Navbar({
                           onChange={handleSoundEnabled}
                           className="sr-only peer"
                         />
-                        <div className="w-8 h-4 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-transparent rounded-full peer bg-black peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:left-[0px] after:bg-gray-300 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                        <div className="w-8 h-4 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-transparent rounded-full peer bg-color-Primary peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:left-[0px] after:bg-gray-300 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-color-Emphasis1"></div>
                       </label>
                     </label>
                   </div>
@@ -176,7 +176,7 @@ export default function Navbar({
                           onChange={handleMusicEnabled}
                           className="sr-only peer"
                         />
-                        <div className="w-8 h-4 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-transparent rounded-full peer bg-black peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:left-[0px] after:bg-gray-300 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                        <div className="w-8 h-4 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-transparent rounded-full peer bg-color-Primary  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:left-[0px] after:bg-gray-300 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-color-Emphasis1"></div>
                       </label>
                     </label>
                   </div>
@@ -199,7 +199,7 @@ export default function Navbar({
               </div>} */}
 
                 <div
-                  className="px-3 cursor-pointer py-3 text-sm hover:font-bold text-xs item"
+                  className="px-3 cursor-pointer py-3  hover:font-bold text-xs item"
                   onClick={() => {
                     setShowGameLimitsModal(!showGameLimitsModal)
                     soundClick()
@@ -211,7 +211,7 @@ export default function Navbar({
                 </div>
 
                 <a
-                  className="px-3 cursor-pointer py-3 text-sm hover:font-bold text-xs item"
+                  className="px-3 cursor-pointer py-3  hover:font-bold text-xs item"
                   href=""
                 >
                   <label className="cursor-pointer text-white text-xs opacity-75">

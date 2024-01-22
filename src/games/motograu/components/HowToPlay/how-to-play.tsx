@@ -24,7 +24,7 @@ export default function HowToPlay({ show, toggle }: Props) {
             zIndex: 9999,
           }}
         >
-          <h1 className="text-1xl uppercase font-bold pl-28 flex gap-4 ">
+          <h1 className="text-1xl uppercase font-bold pl-[165px] flex gap-4 ">
             <BanknotesIcon className="opacity-50 w-6 h-6" /> Regras do
             Jogo - Moto Grau
           </h1>
@@ -53,7 +53,7 @@ export default function HowToPlay({ show, toggle }: Props) {
           </div>
           <hr />
           <div className="p-3">
-            <div className="grid lg:grid-cols-3 gap-12 mb-8">
+            <div className="grid lg:grid-cols-3 gap-4 mb-8">
               <div className="image-step sm:w-[50%] md:w-[40%] lg:w-[100%]  lg:h-[200px] h-[230px] mx-auto">
                 <img
                   className="step-image mx-auto w-full h-[80%] lg:h-[75%] md:h-[77%] sm:h-[79%] h-[77%]"
@@ -151,7 +151,7 @@ export default function HowToPlay({ show, toggle }: Props) {
             <p className="text-base font-bold text-white mt-6 mb-6">
               A nossa interface de jogo
             </p>
-            <p className="text-[12px] text-light text-white opacity-1">
+            <p className="text-[12px] text-light text-white opacity-1 font-bold">
               Apostas ao vivo e Estatísticas
             </p>
             <li className="list">
@@ -169,7 +169,7 @@ export default function HowToPlay({ show, toggle }: Props) {
               do jogo contém informações sobre os últimos resultados
               que saíram durante os últimos jogos.
             </li>
-            <p className="text-[12px] text-light text-white opacity-1 mt-6">
+            <p className="text-[12px] text-light text-white opacity-1 mt-6 font-bold">
               Conversa dentro do jogo
             </p>
             <li className="list">
@@ -180,7 +180,7 @@ export default function HowToPlay({ show, toggle }: Props) {
               grandes ganhos.
             </li>
 
-            <p className="text-[12px] text-light text-white opacity-1 mt-6">
+            <p className="text-[12px] text-light text-white opacity-1 mt-6 font-bold">
               Lidar com problemas técnicos
             </p>
             <li className="list">

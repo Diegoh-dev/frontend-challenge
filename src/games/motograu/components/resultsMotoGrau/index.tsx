@@ -10,7 +10,9 @@ import { MdGraphicEq } from "react-icons/md";
 import { IoMdCloseCircle } from "react-icons/io";
 
 type Props = {
-  variant: string
+  variant: string;
+  expand:boolean;
+   setExpand:(_value:boolean) => void;
 }
 
 type ICrashResult = {
@@ -18,8 +20,8 @@ type ICrashResult = {
   point: number
 }
 
-export default function MultiplierResults({ variant }: Props) {
-  const [expand, setExpand] = useState(false)
+export default function MultiplierResults({ variant,expand,setExpand}: Props) {
+  // const [expand, setExpand] = useState(false)
   const { results, getResults } = useContext<any>(CrashGameContext)
   const { roundInfo, getRoundInfo } =
     useContext<any>(CrashGameContext)
@@ -36,9 +38,9 @@ export default function MultiplierResults({ variant }: Props) {
   }, [])
 
   return (
-    <div className="w-full h-6 relative z-10  mb-2">
+    <div className="w-11/12 h-6 relative z-10  mb-2">
       <If condition={!expand}>
-        <div className="flex mr-[65px] items-center overflow-x-hidden gap-2">
+        <div className="flex mr-[2px] items-center overflow-x-hidden gap-2">
           {results?.map((result, idx) => {
             return (
               <Badge
@@ -46,10 +48,10 @@ export default function MultiplierResults({ variant }: Props) {
                 showRoundInfo={showRoundInfo}
                 textColor={
                   result.point < 2
-                    ? 'bg-[#34b4ff]'
+                    ? 'bg-color-Secondary'
                     : result.point < 10
-                    ? 'bg-[#913ef8]'
-                    : 'bg-[#c017b4]'
+                    ? 'bg-color-Emphasis2'
+                    : 'bg-color-Emphasis1'
                 }
                 roundId={result.round_id}
                 multipler={result.point}
@@ -61,15 +63,22 @@ export default function MultiplierResults({ variant }: Props) {
 
       <If condition={expand}>
         <div className="h-6"></div>
-        <div className="h-auto  absolute -top-1 w-full rounded-md bg-black bg-opacity-80">
-          <div className="rounded-md results-bar">
-            <div className="flex items-center justify-center border border-b-0 border-gray-700 border-opacity-40 relative rounded-t px-2 h-8">
-              <h3 className="text-base uppercase font-bold">
+        <div className="h-[250px]  absolute top-[-18rem] left-[8.5rem]  rounded-[28px] bg-color-Primary w-[80%]">
+          <div className="rounded-[28px]">
+            <div className="flex items-center justify-between relative rounded-t p-2 border-b border-gray-600  border-opacity-20">
+              <h3 className="text-base uppercase font-bold w-[96%] text-center">
                 Histórico de Partidas
               </h3>
+
+              <button
+                className="flex justify-end m-0 p-0 mr-2"
+                onClick={() => setExpand(!expand)}
+              >
+                <IoMdCloseCircle size={20}  />
+              </button>
             </div>
 
-            <div className="flex flex-wrap border border-gray-700 border-opacity-40 shadow h-[30vh] rounded-b p-2 gap-2 overflow-y-scroll scrollbar-w-0 scrollbar-track-gray-400 scrollbar-thumb-gray-700 scrollbar scrollbar-track-rounded scrollbar-thumb-rounded">
+            <div className="flex flex-wrap   h-[30vh] rounded-b px-4 py-3 gap-2 overflow-y-scroll scrollbar-w-0 scrollbar-track-gray-400 scrollbar-thumb-gray-700 scrollbar scrollbar-track-rounded scrollbar-thumb-rounded">
               {results?.map((result, idx) => {
                 return (
                   <Badge
@@ -77,10 +86,10 @@ export default function MultiplierResults({ variant }: Props) {
                     showRoundInfo={showRoundInfo}
                     textColor={
                       result.point < 2
-                        ? 'bg-[#34b4ff]'
+                        ? 'bg-color-Secondary'
                         : result.point < 10
-                        ? 'bg-[#913ef8]'
-                        : 'bg-[#003F33]'
+                        ? 'bg-color-Emphasis2'
+                        : 'bg-color-Emphasis1'
                     }
                     roundId={result.round_id}
                     multipler={result.point}
@@ -92,7 +101,7 @@ export default function MultiplierResults({ variant }: Props) {
         </div>
       </If>
 
-      <div className=" results-btn h-auto flex absolute top-0 right-1 mt-0 z-10 rounded-xl ">
+      {/* <div className=" results-btn h-auto flex absolute top-0 right-1 mt-0 z-10 rounded-xl ">
         <button
           className={`btn p-0 bg-black hover:bg-black border border-gray-700 hover:border-gray-600 rounded-xl  min-h-0 max-h-8 w-12 py-1 h-auto text-xs shadow`}
           onClick={(e) => setExpand(!expand)}
@@ -105,7 +114,7 @@ export default function MultiplierResults({ variant }: Props) {
             <IoMdCloseCircle size={20}  />
           </If>
         </button>
-      </div>
+      </div> */}
 
       <RoundInfoModal
         show={showInfo}

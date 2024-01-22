@@ -42,8 +42,9 @@ export default function Tabs({
   variant = 'slate',
 }: Props) {
   return (
+    // bg-opacity-20
     <div
-      className={`p-1 rounded-3xl bg-gray-700 bg-opacity-20 flex w-full justify-center`}
+      className={`p-1 rounded-3xl bg-color-Secondary  flex w-full justify-center`}
     >
       {tabs.map((tab) => {
         return (
@@ -52,7 +53,7 @@ export default function Tabs({
           
             className={`tab tab-sm flex max:w-[50%]   items-center text-xs font-medium ${size} ${
               active == tab.key
-                ? `rounded-3xl bg-[#362253] opacity-90		 text-gray-300`
+                ? `rounded-3xl bg-color-Emphasis2 opacity-90		 text-gray-300`
                 : ''
             }`}
             onClick={() => toggle(tab.key)}
