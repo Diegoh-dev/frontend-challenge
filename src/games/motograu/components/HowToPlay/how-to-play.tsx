@@ -16,23 +16,23 @@ export default function HowToPlay({ show, toggle }: Props) {
     <Modal show={show} toggle={toggle}>
       <div className="py-0">
         <section
-          className="modal-header py-2 flex justify-between items-center px-3 relative"
+          className="modal-header py-2 flex justify-between items-center px-3 relative bg-color-Primary"
           style={{
             position: 'sticky',
             top: 0,
-            backgroundColor: '#141414',
+            // backgroundColor: '#141414',
             zIndex: 9999,
           }}
         >
-          <h1 className="text-1xl uppercase font-bold pl-[165px] flex gap-4 ">
-            <BanknotesIcon className="opacity-50 w-6 h-6" /> Regras do
+          <h1 className="text-1xl uppercase font-bold pl-[200px] flex gap-4 ">
+            <BanknotesIcon className=" w-6 h-6" /> Regras do
             Jogo - Moto Grau
           </h1>
           <button
             onClick={(_) => toggle()}
             className="btn p-0 btn-sm hover:bg-transparent hover:text-white btn-ghost "
           >
-            <XMarkIcon className="w-6 h-6 opacity-30" />
+            <XMarkIcon className="w-6 h-6" />
           </button>
         </section>
         <div className="p-4 text-sm ">

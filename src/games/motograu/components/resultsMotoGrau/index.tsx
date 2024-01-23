@@ -39,7 +39,7 @@ export default function MultiplierResults({ variant,expand,setExpand}: Props) {
 
   return (
     <div className="w-11/12 h-6 relative z-10  mb-2">
-      <If condition={!expand}>
+      <If condition={true}>
         <div className="flex mr-[2px] items-center overflow-x-hidden gap-2">
           {results?.map((result, idx) => {
             return (
@@ -74,7 +74,8 @@ export default function MultiplierResults({ variant,expand,setExpand}: Props) {
                 className="flex justify-end m-0 p-0 mr-2"
                 onClick={() => setExpand(!expand)}
               >
-                <IoMdCloseCircle size={20}  />
+                    {/* className="w-6 h-6" */}
+                <IoMdCloseCircle size={24}  />
               </button>
             </div>
 

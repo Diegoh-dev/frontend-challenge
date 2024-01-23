@@ -213,7 +213,7 @@ export default function CrashForm({
                         transaction.status !=
                         TransactionStatus.UNREGISTERED
                       }
-                      className="btn btn-ghost min-h-0 flex-1 w-full h-full rounded-3xl text-xl font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40"
+                      className="btn btn-ghost min-h-0 flex-1 w-full h-full rounded-3xl text-xl font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40  hover:bg-color-Primary hover:border-gray-700"
                     >
                       &frac12;
                     </button>
@@ -227,7 +227,7 @@ export default function CrashForm({
                         transaction.status !=
                         TransactionStatus.UNREGISTERED
                       }
-                      className="btn btn-ghost min-h-0 grow w-full h-full  capitalize text-normal font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40 rounded-3xl"
+                      className="btn btn-ghost min-h-0 grow w-full h-full  capitalize text-normal font-normal disabled:bg-gray-700 disabled:bg-opacity-30 border-gray-700 border-opacity-40 rounded-3xl  hover:bg-color-Primary hover:border-gray-700"
                     >
                       2x
                     </button>

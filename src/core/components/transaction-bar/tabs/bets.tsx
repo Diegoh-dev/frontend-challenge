@@ -57,7 +57,7 @@ export default function BetsTab() {
             <div className="text-sm" >{registeredBets.length}</div>
           </div>
 
-          <span className="bg-color-Emphasis1 p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer text-color-white">R$ {sum(registeredBets)}</span>
+          <span className="bg-color-Emphasis1 p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-[28px] cursor-pointer text-color-white">R$ {sum(registeredBets)}</span>
         </div>
       </section>
 

@@ -76,7 +76,7 @@ export const Chat = ({ show = true }: Props) => {
                         </div>
                       </div>
 
-                      <div className="chat-bubble min-h-0 bg-color-Emphasis1">
+                      <div className="chat-bubble min-h-0 bg-color-Emphasis1 overflow-hidden break-words">
                         {data.message}
                       </div>
                       <div className="chat-footer text-xs opacity-50">

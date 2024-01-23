@@ -27,7 +27,7 @@ export default function TextField({
         onChange={(e) => setValue(e.target.value)}
         id={id}
         autoComplete="off"
-        className={`h-full font-bold bg-gray-600 bg-opacity-30 input input-sm focus:outline-none rounded-3xl px-3 pb-1.5 pt-5 w-full border-0 border-gray-300 appearance-none disabled:bg-gray-700 disabled:bg-opacity-30 dark:border-gray-600 focus:ring-0 peer ${
+        className={`h-full font-bold bg-[#252f4b] bg-opacity-90 input input-sm focus:outline-none rounded-3xl px-3 pb-1.5 pt-5 w-full border-0 border-gray-300 appearance-none disabled:bg-gray-700 disabled:bg-opacity-30 dark:border-gray-600 focus:ring-0 peer ${
           label === 'Valor'
             ? 'text-[19px] mt-[1px] text-white'
             : 'text-xs text-gray-400'

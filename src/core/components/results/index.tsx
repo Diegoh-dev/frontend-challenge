@@ -56,8 +56,8 @@ export default function MultiplierResults({ variant }: Props) {
       </If>
 
       <If condition={expand}>
-        <div className="h-6"></div>
-        <div className="h-auto  absolute -top-1 w-full rounded-md bg-black bg-opacity-80">
+        <div className="h-[1.3rem]"></div>
+        <div className="h-auto  absolute -top-1 w-full rounded-md bg-color-Primary bg-opacity-80">
           <div className="rounded-md ">
             <div className="flex items-center justify-between relative rounded-t px-2 h-8">
               <h3 className="text-sm uppercase">

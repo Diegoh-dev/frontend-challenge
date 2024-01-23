@@ -22,6 +22,7 @@ import { Chat } from '../../../../core/components/chat'
 import motograuLogo from '../../../../assets/logos/moto-grau.png';
 import ProgressBar from '../../../../core/components/progress-bar';
 import Display from '../display'
+import { LimitesJogos } from '../LimitesJogo';
 export default function NavbarMotoGrau({
   game,
   balance,
@@ -102,11 +103,9 @@ export default function NavbarMotoGrau({
   return (
     <div className="">
       <div className="navbar mx-auto  my-auto sm:px-3 h-12 flex items-center w-full justify-between">
-       
         <img className="w-16" src={motograuLogo} alt="motograuLogo" />
-        <div
-        >
-          <div className="bg-color-Emphasis1 p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-xl cursor-pointer ">
+        <div>
+          <div className="bg-color-Emphasis1 p-2 text-base  text-center font-bold  transition ease-in-out delay-150 hover:scale-110	 rounded-[28px] cursor-pointer ">
             <span className=" 	text-color-white ">
               <span className="player-currency">R$</span> {balance}
             </span>
@@ -157,7 +156,6 @@ export default function NavbarMotoGrau({
                         />
                         <div className="w-8 h-4 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-transparent rounded-full peer bg-black peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0px] after:left-[0px] after:bg-gray-300 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
                       </label>
-                    
                     </label>
                   </div>
                 </div>
@@ -200,6 +198,7 @@ export default function NavbarMotoGrau({
                   className="px-3 cursor-pointer py-3  hover:font-bold text-xs item"
                   onClick={() => {
                     setShowGameLimitsModal(!showGameLimitsModal)
+                    setIsDropdownOpen(false)
                     soundClick()
                   }}
                 >
@@ -222,12 +221,17 @@ export default function NavbarMotoGrau({
         </div>
       </div>
 
+      {showGameLimitsModal && (
+        <LimitesJogos
+          show={showGameLimitsModal}
+          toggle={setShowGameLimitsModal}
+        />
+      )}
 
-      <GameLimitsModal
+      {/* <GameLimitsModal
         show={showGameLimitsModal}
         toggle={setShowGameLimitsModal}
-      />
-
+      /> */}
     </div>
   )
 }
