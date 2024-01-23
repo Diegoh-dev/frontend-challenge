@@ -182,6 +182,8 @@ export default function CrashForm({
               active={transaction.mode}
               toggle={updateMode}
               variant={'gray'}
+              isButtons={true}
+
             />
           </div>
         </div>

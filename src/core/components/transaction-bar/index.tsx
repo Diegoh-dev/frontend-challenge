@@ -33,6 +33,7 @@ export default function TransactionBar({ variant }: Props) {
               active={activeTab}
               toggle={setActiveTab}
               variant={variant}
+              isButtons={false}
             />
           </div>
         </section>

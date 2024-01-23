@@ -11,6 +11,7 @@ type Props = {
   size: string
   toggle: Function
   variant: string
+  isButtons:boolean;
 }
 
 const getVariantColor = (variant: string) => {
@@ -40,11 +41,12 @@ export default function Tabs({
   active,
   toggle,
   variant = 'slate',
+  isButtons = false
 }: Props) {
   return (
     // bg-opacity-20
     <div
-      className={`p-1 rounded-3xl bg-color-Secondary  flex w-full justify-center`}
+      className={`p-1 rounded-3xl ${isButtons ? 'bg-color-Primary' : 'bg-color-Secondary' }  flex w-full justify-center`}
     >
       {tabs.map((tab) => {
         return (
